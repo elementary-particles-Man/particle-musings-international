@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Overview of Japan's Political Landscape (June 11, 2025)</title>
+  <link rel="stylesheet" href="../assets/Style_contents.css">
+  <style>
+    .ruling { border: 3px solid red; padding: 0.5em; margin-bottom: 1em; }
+    .quasi-ruling { border: 3px dashed red; padding: 0.5em; margin-bottom: 1em; }
+    .ruling-color { background-color: #ffe6e6; padding: 0.5em; }
+    .quasi-ruling-color { background-color: #fff0e6; padding: 0.5em; }
+    .opposition-color { background-color: #eef; padding: 0.5em; }
+    .centrist-color { background-color: #e0f7ff; padding: 0.5em; }
+    .chart-title { font-size: 1.2em; font-weight: bold; margin-bottom: 0.5em; }
+    .chart-label { text-align: center; margin-top: 0.2em; font-weight: bold; }
+    .highlight-red { color: red; font-weight: bold; }
+  </style>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+  <h1>Overview of Japan's Political Landscape (June 11, 2025)</h1>
+  <p class="highlight-red">None of these parties truly understand the Fiat System.</p>
+
+  <div class="chart-title">【House of Representatives】</div>
+  <div id="reps-chart"></div>
+  <div class="chart-label">House of Representatives (衆議院)</div>
+
+  <div class="chart-title">【House of Councillors】</div>
+  <div id="council-chart"></div>
+  <div class="chart-label">House of Councillors (参議院)</div>
+
+  <h2>Explanation of Japan's Legislative Structure</h2>
+  <ul>
+    <li>The House of Representatives (Shuugiin) has 465 seats. Term: 4 years.</li>
+    <li>The House of Councillors (Sangiin) has 248 seats. Half is re-elected every 3 years. Term: 6 years.</li>
+    <li>The House of Representatives holds supremacy in legislation, budget approval (natural passage), and prime minister selection.</li>
+  </ul>
+
+  <h2>Current Power Balance</h2>
+  <div class="ruling">
+    <div class="ruling-color">
+      <strong>Ruling Coalition (LDP + Komeito):</strong> Not holding a lower house majority (191+24=215 / 233 needed).
+    </div>
+  </div>
+  <div class="quasi-ruling">
+    <div class="quasi-ruling-color">
+      <strong>Possible Alliance (LDP + Komeito + CDP):</strong> Speculative alignment, under public scrutiny.
+    </div>
+  </div>
+
+  <h2>Major Political Parties (as of June 2025)</h2>
+
+  <div class="ruling-color">
+    <h3>Liberal Democratic Party (LDP) - 自由民主党</h3>
+    <p><strong>Leader:</strong> Shigeru Ishiba<br>
+    <strong>Defense:</strong> Strong stance, promoting pre-emptive capabilities.<br>
+    <strong>Diplomacy:</strong> Deep U.S. alliance and regional stability.<br>
+    <strong>Economy:</strong> Redistribution + middle-class support. <a href="#">Official site</a></p>
+  </div>
+
+  <div class="ruling-color">
+    <h3>Komeito - 公明党</h3>
+    <p><strong>Leader:</strong> Tetsuo Saito<br>
+    <strong>Defense:</strong> Supports alliance, cautious on expansion.<br>
+    <strong>Diplomacy:</strong> Advocates China relations and nuclear abolition.<br>
+    <strong>Economy:</strong> Humanitarian socialism. <a href="#">Official site</a></p>
+  </div>
+
+  <div class="quasi-ruling-color">
+    <h3>Constitutional Democratic Party (CDP) - 立憲民主党</h3>
+    <p><strong>Leader:</strong> Yoshihiko Noda<br>
+    <strong>Defense:</strong> Defensive, anti pre-emptive strike.<br>
+    <strong>Diplomacy:</strong> Multilateralism, critical of SOFA.<br>
+    <strong>Economy:</strong> Welfare, gender equality, decentralization. <a href="#">Official site</a></p>
+  </div>
+
+  <div class="centrist-color">
+    <h3>Democratic Party for the People (DPFP) - 国民民主党</h3>
+    <p><strong>Leader:</strong> Yuichiro Tamaki<br>
+    <strong>Defense:</strong> Balanced, moderate enhancement.<br>
+    <strong>Diplomacy:</strong> U.S.-Japan alliance, economic diplomacy.<br>
+    <strong>Economy:</strong> Growth + realistic reforms. <a href="#">Official site</a></p>
+  </div>
+
+  <div class="opposition-color">
+    <h3>Japan Innovation Party (Ishin) - 日本維新の会</h3>
+    <p><strong>Leader:</strong> Hirofumi Yoshimura<br>
+    <strong>Defense:</strong> Constitutional revision, expansion.<br>
+    <strong>Diplomacy:</strong> Hardline, aligns with LDP.<br>
+    <strong>Economy:</strong> Decentralization, free education. <a href="#">Official site</a></p>
+  </div>
+
+  <div class="opposition-color">
+    <h3>Japanese Communist Party (JCP) - 日本共産党</h3>
+    <p><strong>Leader:</strong> Akira Koike<br>
+    <strong>Defense:</strong> Pacifist, anti-armament.<br>
+    <strong>Diplomacy:</strong> Neutralism, peace diplomacy.<br>
+    <strong>Economy:</strong> Anti-capitalist, pro-worker. <a href="#">Official site</a></p>
+  </div>
+
+  <script>
+    Plotly.newPlot('reps-chart', [{
+      values: [191, 24, 148, 38, 27, 37],
+      labels: ['LDP', 'Komeito', 'CDP', 'Ishin', 'DPFP', 'Others'],
+      type: 'pie',
+      textinfo: 'label+percent',
+      hoverinfo: 'label+value+percent',
+      marker: {
+        colors: ['#ff6666', '#ffcc99', '#99ccff', '#ccff99', '#66ccff', '#dddddd']
+      }
+    }], {
+      title: 'Composition of the House of Representatives',
+    });
+
+    Plotly.newPlot('council-chart', [{
+      values: [115, 20, 39, 20, 15, 10, 29],
+      labels: ['LDP', 'Komeito', 'CDP', 'Ishin', 'JCP', 'DPFP', 'Others'],
+      type: 'pie',
+      textinfo: 'label+percent',
+      hoverinfo: 'label+value+percent',
+      marker: {
+        colors: ['#ff6666', '#ffcc99', '#99ccff', '#ccff99', '#ff9999', '#66ccff', '#dddddd']
+      }
+    }], {
+      title: 'Composition of the House of Councillors',
+    });
+  </script>
+</body>
+</html>
