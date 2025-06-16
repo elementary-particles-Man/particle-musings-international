@@ -275,3 +275,11 @@ footer {
         font-size: clamp(1.1em, 5vw, 1.6em); /* さらに狭い画面でのフォントサイズ調整 */
     }
 }
+
+.thumbnail {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 100%;
+    object-fit: contain;
+}
