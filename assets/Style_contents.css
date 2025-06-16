@@ -273,3 +273,14 @@ caption {
     text-indent: 0; /* 参考資料の各項目は字下げなし */
     margin-bottom: 0.6em;
 }
+
+.header-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
