@@ -9,8 +9,7 @@ body {
 }
 
 .page-container {
-    max-width: 1200px; /* ページ全体の最大幅 */
-    margin: 20px auto; /* 上下マージンと左右中央寄せ */
+    margin: 20px
     padding: 20px;
     background-color: #fefefe; /* コンテナ背景色 */
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -149,9 +148,10 @@ body {
 
 /* カテゴリーグリッド */
 .category-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch;
 }
 
 .category-item {
